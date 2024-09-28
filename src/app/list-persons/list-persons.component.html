@@ -1,0 +1,27 @@
+<p>list-persons works!</p>
+<table border="1" style="margin: auto;width: 80%;">
+    <thead>
+        <tr>
+            <td>編號</td>
+            <td>姓</td>
+            <td>名</td>
+            <td>街區</td>
+            <td>城市</td>
+             <td>修改</td>
+             <td>刪除</td>
+        </tr>
+    </thead>
+<tbody>
+<tr *ngFor="let person of persons">
+    <td>{{person.id}}</td>
+    <td>{{person.firstname}}</td>
+    <td>{{person.lastname}}</td>
+    <td>{{person.street}}</td>
+    <td>{{person.city}}</td>
+    <td><a routerLink="../update-person/{{person.id}}" >修改</a></td>
+    <td><a routerLink="../delete-person/{{person.id}}">刪除</a></td>
+</tr>
+
+</tbody>
+
+</table>
